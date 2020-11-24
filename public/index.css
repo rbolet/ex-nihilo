@@ -1,0 +1,60 @@
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+body * {
+  margin: 0;
+}
+
+#header {
+  height: 60px;
+  border: 1px solid cyan;
+}
+
+.page-container {
+  min-height: calc(100vh - 60px);
+  padding: 0 1.5rem;
+  border: 1px solid lime;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: "Bungee";
+  font-size: calc(30px + (75 - 30) * ((100vw - 300px) / (1600 - 300)));
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+  margin: 0 auto;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+#title-cursor {
+  animation: blink 1s steps(1, start) 0s infinite;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
